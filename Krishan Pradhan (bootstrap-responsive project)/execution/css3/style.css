@@ -1,0 +1,100 @@
+*{
+margin: 0%;
+padding: 0%;
+}
+#searchopen{
+  display: none;
+}
+#slider1{
+  height:500px;
+}
+#logo{
+  width: 40px;
+  height: 35px;
+  border-radius: 20px;
+}
+#minibtntry{
+  width: 30px;
+}
+#imgminislide{
+  height: 160px;
+  width: auto;
+}
+#bankimg{
+  width: 250px;
+  height: 200px;
+}
+#sliderpara{
+  color: white;
+  text-shadow: 4px 4px 3px black;
+  line-height: ;
+}
+#arrowup{
+    color: lightgreen;
+    font-size: 50px;
+    position:fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    display: none;
+}
+#navbrand{
+    width: 70px;
+    height: 50px;
+}
+#commentbox{
+  width: 450px;
+}
+
+#hovernav ul li a{
+  color: black;
+}
+
+#hovernav ul li a:hover{
+  font-weight: bold;
+}
+#mytoggle ul li a:hover{
+  font-weight: bold;
+}
+#logincard1{
+  box-shadow: 4px 4px 3px black;
+}
+
+@media only screen and (max-width:770px) {
+  
+#navhide{
+  display:none;
+}
+#slider1{
+  height:300px;
+}
+#navtoggleicon{
+  font-size: 12px;  
+}
+#shide{
+  display: none;
+}
+#selecttry{
+  flex-direction: column;
+}
+#selecttry1{
+  width: 100%;
+}
+#imgminislide{
+  width: 80%;
+}
+#bankimg{
+  width: 130px;
+  height: 130px;
+}
+#map{
+   width: auto;
+   
+   
+}
+#commentbox{
+  width: 300px;
+}
+    }
+
+ 

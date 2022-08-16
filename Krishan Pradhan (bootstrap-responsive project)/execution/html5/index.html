@@ -1,0 +1,1029 @@
+<!doctype html>
+<head><title>bootstrap</title>
+  <meta charset="utf-8">
+  <link rel="icon" href="../../raw/png/logo.png" size="32*32">
+  <link rel="stylesheet" href="../../execution/css3/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+
+
+  <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+
+      <button id="navtoggleicon"type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mytoggle">
+        <span  class="navbar-toggler-icon"></span>
+       </button>
+      <a class="navbar-brand" data-bs-toggle="tooltip" data-bs-placement="top" title="Fresh Daily" href="#"> <img id ="logo" src="../../raw/png/logo.png" alt="logo"></a>
+         
+       
+      <div class="collapse navbar-collapse" id="mytoggle"> 
+        <ul class="navbar-nav me-auto">
+         <li class="nav-item"><a class="nav-link active" href="#"> HOME </a></li>
+         <li class="nav-item"><a class="nav-link" href="#food"> FOOD </a></li>
+         <li class="nav-item"><a class="nav-link" href="#clean"> CLEANING </a></li>
+         <li class="nav-item"><a class="nav-link" href="#care"> PERSONAL CARE</a></li>
+         <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-target="#dropdownlist" href="#"> BRANDS</a>
+            <ul id="dropdownlist" class="dropdown-menu dropdown-menu-dark">
+              <li> <a class="dropdown-item"  href="">  <img id="navbrand" class="" src="../../raw/jpeg/brandimg1.jpg" alt="1"><span class="mx-2"> Amul </span></a> </li>
+              <li > <a class="dropdown-item" href="">  <img id="navbrand" class="" src="../../raw/jpeg/brandimg2.jpg"  alt="2"><span class="mx-2"> Lakme </span> </a> </li>
+              <li > <a class="dropdown-item" href="">  <img  id="navbrand" class="" src="../../raw/jpeg/brandimg3.jpg"  alt="3"> <span class="mx-2"> Fiama </span></a> </li> 
+              <li > <a class="dropdown-item" href="">  <img id="navbrand" class="" src="../../raw/jpeg/brandimg4.jpg"  alt="4"><span class="mx-2"> India Gate </span> </a> </li>
+            </ul>      
+        
+        </li>
+        </ul>    
+      </div> 
+    
+      
+      <div class = "d-flex">
+        <button type="button" id="login" class="btn btn-sm btn-outline-info me-2"  data-bs-placement="top" title="Login"  data-bs-toggle="offcanvas" data-bs-target="#offcanvas" >
+          <span><i class="fa fa-user"></i></span>
+        </button>
+       <button type="button" id="navhide" class="btn btn-sm btn-outline-info me-2"  data-bs-toggle="offcanvas" data-bs-target="#offcanvas">
+         <span class="fa fa-id-card"></span>
+       </button>
+       <button type="button" class="btn btn-sm btn-outline-info me-3" data-bs-toggle="tooltip" data-bs-placement="top" title="Cart">
+        <span class="fa fa-cart-shopping"> <span id="badge">0</span>
+        </span>
+      </button>
+       <button type="button" id="btn1" class="btn btn-sm btn-outline-success"><span id="shide">Search</span>
+        <span class="fa fa-search"></span>
+      </button>
+      </div>
+
+    </div>  
+  </nav>
+  <div id="searchopen" class="container mt-5 fixed-top">
+    <form action="">
+      <div class="row">
+        <div class="col-auto w-75">
+          <input type="search" class="form-control " placeholder="Search">
+        </div>
+        <div class="col-auto w-25">
+           <button class="btn btn-success ">submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+  <div class="offcanvas offcanvas-start" id="offcanvas">
+
+
+    <div class="container mt-3">
+      
+      
+      <ul class="nav" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" data-bs-toggle="pill" href="#offcanvastab1"> Log in</a>
+        </li>
+        <li class="nav-item  me-auto">
+          <a class="nav-link" data-bs-toggle="pill" href="#offcanvastab2"> Register</a>
+        </li>
+        <div class="d-flex">
+           <button class="btn btn-close mt-2" data-bs-dismiss="offcanvas"></button>
+        </div>
+      </ul>
+    
+      
+      <div class="tab-content">
+        <div id="offcanvastab1" class="container tab-pane active"><br>
+          <h3>Log In</h3>
+              <form>
+                <div class="form-floating mb-4">
+                  <input type="email" class="form-control is valid" placeholder="email" required>
+                  <label for="email">Email</label>
+                </div>
+                <div class="form-floating mb-3">
+                   <input type="password" class="form-control is valid" placeholder="password" requierd>
+                   <label for="pwd"> Password</label>
+                </div>
+                <input id="submitt" type="submit" class="btn btn-outline-success w-100"></input>
+              </form>
+        </div>
+
+        <div id="offcanvastab2" class=" tab-pane fade"><br>
+          <h3> Register</h3>
+          <form action="">
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control is valid" placeholder="email" required>
+              <label for="email">Email</label>
+            </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control is valid" placeholder="First Name" required>
+                <label for ="name"> First Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control is valid" placeholder="Last Name" required>
+                <label for ="name"> Last Name</label>
+              </div>
+              <div class="form-check-inline mx-5">
+                <input type="radio" class="form-check-input" name="gender">
+                <lable for="men">Men</lable>
+              </div>
+              <div class="form-check-inline mx-5">
+                <input type="radio" class="form-check-input" name="gender">
+                <lable for="men">Women</lable>
+              </div>
+              <div class="form-floating mt-3 mb-3">
+               <input type="text" class="form-control mt-3" placeholder="Mobile Number">
+               <label for ="number"> Number </label>
+              </div>
+              <div class="form-floating mt-3 mb-3">
+                <input type="password" class="form-control is valid" placeholder="Last Name" required>
+                <label for ="password"> Password</label>
+              </div>  
+              <input id="submit" type="submit" class="btn btn-outline-success w-100"></input>
+          </form>
+    
+        </div>
+       
+      </div>
+    </div>
+  
+  </div>
+  
+
+
+
+  <div id ="carouselmain" class="carousel carousel-dark slide mt-5 mb-5" data-bs-ride="carousel">
+
+    <div class="carousel-inner mt-5">
+      <div class="carousel-item active"> 
+        <img id="slider1" src="../../raw/jpeg/slider1.jpg" alt="slider1" class="d-block w-100">
+      
+            <div class="carousel-caption">
+               <h2 id="sliderpara">Trusted Brand with genuine quality.</h2>
+            </div>
+        </div>      
+      <div class="carousel-item">  
+        <img id="slider1" src="../../raw/jpeg/slider2.jpg" alt="slider2" class="d-block w-100" >
+        
+             <div class="carousel-caption">
+                 <h2 id="sliderpara" >Fast Delivery in 30 minute on your doorstep.</h2>
+              </div>
+      </div>        
+      <div class="carousel-item">  
+        <img id="slider1" src="../../raw/jpeg/slider3.jpg" alt="slider3" class="d-block w-100">
+        
+            <div class="carousel-caption">
+               <h2 id="sliderpara" >All time frest Fresh vegetable.</h2>
+            </div>
+        </div>    
+    </div>
+    <button class="carousel-control-next" data-bs-target="#carouselmain" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+    <button class="carousel-control-prev" data-bs-target="#carouselmain" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+  </div>
+
+  <section id="about" class="bg-dark">
+ <div class="container-fluid mt-5 mb-5">
+   <div class="row p-lg">  
+    <div class="col-lg-4 p-lg-3 ">
+       <h2 class="text-light">ABOUT</h2>
+         <p class="text-light">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti suscipit, magnam itaque repellendus commodi numquam distinctio nesciunt expedita facilis soluta totam deserunt, perferendis veniam repudiandae incidunt minus repellat animi inventore alias magni. Dolor at quam ducimus eaque officiis! Vero doloremque dicta fugit a enim! Architecto atque modi consectetur ex animi!
+         </p>
+    </div>
+ <div class="col-lg-8 ">
+    <video class="w-100 d-block mx-auto" loop="true" audio="muted" autoplay="autoplay"  muted >
+      <source src="../../raw/video/mp4/demovideo.mp4" type="video/mp4">
+    </video>
+ </div>
+</div>
+  </section>
+
+  <i id="arrowup" class="fa-solid fa-circle-arrow-up"></i>
+
+  <div class=" container mt-2 mb-5 ">
+      <h2 class=" text-center mt-3">BANK OFFERS</h2>
+    <div class="row ">
+      <div class="col rounded">
+          
+            <img class="mx-auto d-block rounded" id="bankimg" src="../../raw/jpeg/bank1.jpg" alt="bank1">
+          
+      </div>
+      <div class="col  rounded text-light">
+       
+          <img class="mx-auto d-block rounded" d-block id="bankimg" src="../../raw/jpeg/bank2.jpg" alt="bank1">
+        
+      </div>
+      <div class="col  rounded">
+        
+          <img class="mx-auto d-block rounded" id="bankimg" src="../../raw/jpeg/bank3.jpg" alt="bank1">
+        
+      </div>
+      <div class="col rounded">
+        
+          <img class="mx-auto d-block rounded" id="bankimg" src="../../raw/jpeg/bank4.jpg" alt="bank1">
+        
+     </div>
+
+    </div>
+  </div>
+
+  
+
+            <section id="food">
+  
+  <div class="container bg-dark">
+
+    <div class="d-flex flex-wrap justify-content-evenly">
+      <div class="container-1 text-light  lh-lg"> FOOD CATOGARY</div>
+      <div>
+      <button class="btn btn-sm btn-outline-success active" data-bs-target="#minislide1" data-bs-slide-to="0">Rice</button>      
+    </div>
+    <div>
+      <button class="btn btn-sm btn-outline-success "data-bs-target="#minislide1" data-bs-slide-to="1">Oil</button>      
+    </div>
+    <div>
+      <button class="btn btn-sm btn-outline-success "data-bs-target="#minislide1" data-bs-slide-to="2">Vegetable</button>      
+    </div>
+    <div>
+      <button class="btn btn-sm btn-outline-success "data-bs-target="#minislide1" data-bs-slide-to="3">Fruit</button>      
+    </div>
+  </div>
+
+  <div id="minislide1" class="carousel carousel-dark slide " data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div id="" class="d-flex justify-content-evenly  w-100 bg-info" style="height:auto;">
+          <div class="card w-50">
+              <div clss="card-head"><img id="imgminislide"  class="rounded mx-auto d-block mt-2 " src="../../raw/jpeg/rice.jpg" alt="rice"></div>
+              <div class="card-title text-center mt-2">India Gate Basmati Rice</div>
+              <div class="card-body ">
+                <form action="">
+                  <div id="selecttry" class="row">
+                    <div id="selecttry1" class="col-8">
+                    <select id="" class="form-control w-100  mx-auto text-center" name="rice" id="">
+                      <option value="">1kg- Rs.200.00</option>
+                      <option value="">2kg- Rs.300.00</option>
+                      <option value="">3kg- Rs.500.00</option>
+                    </select>
+                  </div>
+                  <div id="selecttry1" class="col-4">
+                  <select class="form-control w-100 mx-auto text-center" name="food" id="">
+                    <option value=""> Quantity - 1 pc</option>
+                    <option value=""> Quantity - 2 pc </option>
+                    <option value=""> Quantity - 3 pc </option>
+                    <option value=""> Quantity - 4 pc</option>
+                   </select>
+                   </div>
+                  </div>
+                </form>
+                  <button id="cartbtn" class="btn btn-outline-success mt-2 w-100" data-bs-toggle="modal" data-bs-target="#modal">Add To Cart
+                  </button>               
+                
+              </div>
+          </div>
+          <div class="card w-50">
+            <div clss="card-head"><img id="imgminislide" class="rounded mx-auto d-block mt-2 " src="../../raw/jpeg/rice1.jpg" alt="rice"></div>
+              <div class="card-title text-center mt-2">Dawat Biryani Basmati Rice</div>
+            <div class="card-body">
+              <form action="">
+                <div class="row">
+                  <div id="selecttry1" class="col-8">
+                  <select class="form-control w-100  mx-auto text-center" name="rice" id="">
+                    <option value="">1kg- Rs.200.00</option>
+                    <option value="">2kg- Rs.300.00</option>
+                    <option value="">3kg- Rs.500.00</option>
+                  </select>
+                </div>
+                <div id="selecttry1" class="col-4">
+                <select class="form-control w-100 mx-auto text-center" name="rice" id="">
+                  <option value=""> Quantity - 1 pc</option>
+                  <option value=""> Quantity - 2 pc </option>
+                  <option value=""> Quantity - 3 pc </option>
+                  <option value=""> Quantity - 4 pc</option>
+                 </select>
+                 </div>
+                </div>
+              </form>
+                <button id="cartbtn" type="submit" class="btn  btn-outline-success mt-2 w-100"data-bs-toggle="modal" data-bs-target="#modal">Add To Cart
+                </button>               
+              
+
+            </div>
+          </div>
+        </div> 
+      </div>
+      <div class="carousel-item">
+        <div id="" class="d-flex justify-content-evenly  w-100 bg-info" style="height:auto;">
+          <div class="card w-50">
+              <div clss="card-head"><img id="imgminislide" class="rounded mx-auto d-block mt-2" src="../../raw/jpeg/oil.jpg" alt="rice"></div>
+              <div class="card-title text-center mt-2">Frotune kachighani mustrud oil</div>
+              <div class="card-body ">
+                <form action="">
+                  <div id="selecttry" class="row">
+                    <div id="selecttry1" class="col-8">
+                    <select id="" class="form-control w-100  mx-auto text-center" name="rice" id="">
+                      <option value="">1 Litre- Rs.120.00</option>
+                      <option value="">2 litre- Rs.150.00</option>
+                      <option value="">3 Litre- Rs.200.00</option>
+                    </select>
+                  </div>
+                  <div id="selecttry1" class="col-4">
+                  <select class="form-control w-100 mx-auto text-center" name="rice" id="">
+                    <option value=""> Quantity - 1 pc</option>
+                    <option value=""> Quantity - 2 pc </option>
+                    <option value=""> Quantity - 3 pc </option>
+                    <option value=""> Quantity - 4 pc</option>
+                   </select>
+                   </div>
+                  </div>
+                </form>
+                  <button id="cartbtn" type="submit" class="btn btn-outline-success mt-2 w-100"data-bs-toggle="modal" data-bs-target="#modal">Add To Cart
+                  </button>               
+                
+              </div>
+          </div>
+          <div class="card w-50">
+            <div clss="card-head"><img id="imgminislide" class="rounded mx-auto d-block mt-2 " src="../../raw/jpeg/oil1.jpg" alt="rice"></div>
+              <div class="card-title text-center mt-2">Emami Sunflower Refined Oil</div>
+            <div class="card-body">
+              <form action="">
+                <div class="row">
+                  <div id="selecttry1" class="col-8">
+                  <select class="form-control w-100  mx-auto text-center" name="rice" id="">
+                    <option value="">1 Litre- Rs.120.00</option>
+                    <option value="">2 Litre- Rs.210.00</option>
+                    <option value="">3 Litre- Rs.260.00</option>
+                  </select>
+                </div>
+                <div id="selecttry1" class="col-4">
+                <select class="form-control w-100 mx-auto text-center" name="rice" id="">
+                  <option value=""> Quantity - 1 pc</option>
+                  <option value=""> Quantity - 2 pc </option>
+                  <option value=""> Quantity - 3 pc </option>
+                  <option value=""> Quantity - 4 pc</option>
+                 </select>
+                 </div>
+                </div>
+              </form>
+                <button id="cartbtn" type="submit" class="btn  btn-outline-success mt-2 w-100"data-bs-toggle="modal" data-bs-target="#modal">Add To Cart
+                </button>               
+            </div>
+          </div>
+        </div>        
+      </div>   
+      <div class="carousel-item">
+        <div id="" class="d-flex justify-content-evenly  w-100 bg-info" style="height:auto;">
+          <div class="card w-50">
+              <div clss="card-head"><img id="imgminislide" class="rounded mx-auto d-block mt-2" src="../../raw/jpeg/vegetable.jpg" alt="rice"></div>
+              <div class="card-title text-center mt-2">Ladies finger</div>
+              <div class="card-body ">
+                <form action="">
+                  <div id="selecttry" class="row">
+                    <div id="selecttry1" class="col-8">
+                    <select id="" class="form-control w-100  mx-auto text-center" name="food" id="">
+                      <option value="">500gm- Rs.10.00</option>
+                      <option value="">1 kg- Rs.20.00</option>
+                      <option value="">3 kg- Rs.54.00(-10% off)</option>
+                    </select>
+                  </div>
+                  <div id="selecttry1" class="col-4">
+                  <select class="form-control w-100 mx-auto text-center" name="rice" id="">
+                    <option value=""> Quantity - 1 pc</option>
+                    <option value=""> Quantity - 2 pc </option>
+                    <option value=""> Quantity - 3 pc </option>
+                    <option value=""> Quantity - 4 pc</option>
+                   </select>
+                   </div>
+                  </div>
+                </form>
+                  <button id="cartbtn" type="submit" class="btn btn-outline-success mt-2 w-100"data-bs-toggle="modal" data-bs-target="#modal">Add To Cart
+                  </button>               
+                
+              </div>
+          </div>
+          <div class="card w-50">
+            <div clss="card-head"><img id="imgminislide" class="rounded mx-auto d-block mt-2 " src="../../raw/jpeg/vegetable1.jpg" alt="rice"></div>
+              <div class="card-title text-center mt-2">Potato</div>
+            <div class="card-body">
+              <form action="">
+                <div class="row">
+                  <div id="selecttry1" class="col-8">
+                  <select class="form-control w-100  mx-auto text-center" name="rice" id="">
+                    <option value="">500gm- Rs.10.00</option>
+                    <option value="">1 kg- Rs.20.00</option>
+                    <option value="">3 kg- Rs.54.00(-10% off)</option>
+                  </select>
+                </div>
+                <div id="selecttry1" class="col-4">
+                <select class="form-control w-100 mx-auto text-center" name="rice" id="">
+                  <option value=""> Quantity - 1 pc</option>
+                  <option value=""> Quantity - 2 pc </option>
+                  <option value=""> Quantity - 3 pc </option>
+                  <option value=""> Quantity - 4 pc</option>
+                 </select>
+                 </div>
+                </div>
+              </form>
+                <button id="cartbtn" type="submit" class="btn  btn-outline-success mt-2 w-100"data-bs-toggle="modal" data-bs-target="#modal">Add To Cart
+                </button>               
+            </div>
+          </div>
+        </div>        
+      </div>      
+      <div class="carousel-item">
+        <div id="" class="d-flex justify-content-evenly  w-100 bg-info" style="height:auto;">
+          <div class="card w-50">
+              <div clss="card-head"><img id="imgminislide" class="rounded mx-auto d-block mt-2" src="../../raw/jpeg/fruit.jpg" alt="rice"></div>
+              <div class="card-title text-center mt-2">Apple</div>
+              <div class="card-body ">
+                <form action="">
+                  <div id="selecttry" class="row">
+                    <div id="selecttry1" class="col-8">
+                    <select id="" class="form-control w-100  mx-auto text-center" name="food" id="">
+                      <option value="">500gm- Rs.80.00</option>
+                      <option value="">1 kg- Rs.160.00</option>
+                      <option value="">3 kg- Rs.432.00(-10% off)</option>
+                    </select>
+                  </div>
+                  <div id="selecttry1" class="col-4">
+                  <select class="form-control w-100 mx-auto text-center" name="rice" id="">
+                    <option value=""> Quantity - 1 pc</option>
+                    <option value=""> Quantity - 2 pc </option>
+                    <option value=""> Quantity - 3 pc </option>
+                    <option value=""> Quantity - 4 pc</option>
+                   </select>
+                   </div>
+                  </div>
+                </form>
+                  <button id="cartbtn" type="submit" class="btn btn-outline-success mt-2 w-100"data-bs-toggle="modal" data-bs-target="#modal">Add To Cart
+                  </button>               
+                
+              </div>
+          </div>
+          <div class="card w-50">
+            <div clss="card-head"><img id="imgminislide" class="rounded mx-auto d-block mt-2 " src="../../raw/jpeg/fruit1.jpg" alt="rice"></div>
+              <div class="card-title text-center mt-2">Banana</div>
+            <div class="card-body">
+              <form action="">
+                <div class="row">
+                  <div id="selecttry1" class="col-8">
+                  <select class="form-control w-100  mx-auto text-center" name="food" id="">
+                    <option value="">6 pc- Rs.20.00</option>
+                    <option value="">12 pc- Rs.40.00</option>
+                    <option value="">18 pc- Rs.54.00(-10% off)</option>
+                  </select>
+                </div>
+                <div id="selecttry1" class="col-4">
+                <select class="form-control w-100 mx-auto text-center" name="rice" id="">
+                  <option value=""> Quantity - 1 pc</option>
+                  <option value=""> Quantity - 2 pc </option>
+                  <option value=""> Quantity - 3 pc </option>
+                  <option value=""> Quantity - 4 pc</option>
+                 </select>
+                 </div>
+                </div>
+              </form>
+                <button id="cartbtn" type="submit" class="btn  btn-outline-success mt-2 w-100"data-bs-toggle="modal" data-bs-target="#modal">Add To Cart
+                </button>               
+            </div>
+          </div>
+        </div>        
+      </div>      
+
+    </div>
+
+    <button id="minibtntry" class="carousel-control-next" data-bs-target="#minislide1" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+    <button id="minibtntry" class="carousel-control-prev" data-bs-target="#minislide1" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon "></span>
+    </button>
+   </div>
+  
+  </div>
+
+          </section>
+           <section id="clean">
+
+  <div class="container bg-dark">
+
+    <div class="d-flex flex-wrap justify-content-evenly">
+      <div class="container-1 text-light  lh-lg"> CLEANING CATOGARY</div>
+      <div>
+      <button class="btn btn-sm btn-outline-warning active" data-bs-target="#minislide2" data-bs-slide-to="0">Soap and Detergent</button>      
+    </div>
+    <div>
+      <button class="btn btn-sm btn-outline-warning "data-bs-target="#minislide2" data-bs-slide-to="1">Toilet Cleaning</button>      
+    </div>
+    <div>
+      <button class="btn btn-sm btn-outline-warning "data-bs-target="#minislide2" data-bs-slide-to="2">item3</button>      
+    </div>
+    <div>
+      <button class="btn btn-sm btn-outline-warning "data-bs-target="#minislide2" data-bs-slide-to="3">item4</button>      
+    </div>
+  </div>
+
+
+  <div id="minislide2" class="carousel carousel-dark slide " data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div id="" class="d-flex justify-content-evenly  w-100 bg-info" style="height:auto;">
+          <div class="card w-50">
+              <div clss="card-head"><img id="imgminislide" class="rounded mx-auto d-block mt-2 " src="../../raw/jpeg/serf.jpg" alt="serf"></div>
+              <div class="card-title text-center mt-2">Serf-Exel Easy Wash Detergant</div>
+              <div class="card-body ">
+                <form action="">
+                  <div id="selecttry" class="row">
+                    <div id="selecttry1" class="col-8">
+                    <select id="" class="form-control w-100  mx-auto text-center" name="rice" id="">
+                      <option value="">1kg- Rs.200.00</option>
+                      <option value="">2kg- Rs.300.00</option>
+                      <option value="">5kg- Rs.500.00</option>
+                    </select>
+                  </div>
+                  <div id="selecttry1" class="col-4">
+                  <select class="form-control w-100 mx-auto text-center" name="rice" id="">
+                    <option value=""> Quantity - 1 pc</option>
+                    <option value=""> Quantity - 2 pc </option>
+                    <option value=""> Quantity - 3 pc </option>
+                    <option value=""> Quantity - 4 pc</option>
+                   </select>
+                   </div>
+                  </div>
+                  </form>
+                  <button id="cartbtn" type="submit" class="btn  btn-outline-success mt-2 w-100"data-bs-toggle="modal" data-bs-target="#modal">Add To Cart
+                  </button>               
+                
+              </div>
+          </div>
+          <div class="card w-50">
+            <div clss="card-head"><img id="imgminislide" class="rounded mx-auto d-block mt-2 " src="../../raw/jpeg/soap.jpg" alt="soap"></div>
+              <div class="card-title text-center mt-2">Fena Detergent cake</div>
+            <div class="card-body">
+              <form action="">
+                <div class="row">
+                  <div id="selecttry1" class="col-8">
+                  <select class="form-control w-100  mx-auto text-center" name="rice" id="">
+                    <option value="">190g- Rs.20.00</option>
+                    <option value="">250g- Rs.40.00</option>
+                    <option value="">300g- Rs.50.00</option>
+                  </select>
+                </div>
+                <div id="selecttry1" class="col-4">
+                <select class="form-control w-100 mx-auto text-center" name="rice" id="">
+                  <option value=""> Quantity - 1 pc</option>
+                  <option value=""> Quantity - 2 pc </option>
+                  <option value=""> Quantity - 3 pc </option>
+                  <option value=""> Quantity - 4 pc</option>
+                 </select>
+                 </div>
+                </div>
+                </form>
+                <button id="cartbtn" type="submit" class="btn  btn-outline-success mt-2 w-100"data-bs-toggle="modal" data-bs-target="#modal">Add To Cart
+                </button>               
+              
+
+            </div>
+          </div>
+        </div> 
+      </div>
+      <div class="carousel-item">
+        <div id="" class="d-flex justify-content-evenly  w-100 bg-info" style="height:auto;">
+          <div class="card w-50">
+              <div clss="card-head"><img id="imgminislide" class="rounded mx-auto d-block mt-2" src="../../raw/jpeg/harpic.jpg" alt="rice"></div>
+              <div class="card-title text-center mt-2">Hapic Toilet Cleaner</div>
+              <div class="card-body ">
+                <form action="">
+                  <div id="selecttry" class="row">
+                    <div id="selecttry1" class="col-8">
+                    <select id="" class="form-control w-100  mx-auto text-center" name="rice" id="">
+                      <option value="">500ml- Rs.120.00</option>
+                      <option value="">800ml- Rs.150.00</option>
+                      <option value="">1 Litre- Rs.200.00</option>
+                    </select>
+                  </div>
+                  <div id="selecttry1" class="col-4">
+                  <select class="form-control w-100 mx-auto text-center" name="rice" id="">
+                    <option value=""> Quantity - 1 pc</option>
+                    <option value=""> Quantity - 2 pc </option>
+                    <option value=""> Quantity - 3 pc </option>
+                    <option value=""> Quantity - 4 pc</option>
+                   </select>
+                   </div>
+                  </div>
+                  </form>
+                  <button id="cartbtn" type="submit" class="btn  btn-outline-success mt-2 w-100"data-bs-toggle="modal" data-bs-target="#modal">Add To Cart
+                  </button>               
+             
+              </div>
+          </div>
+          <div class="card w-50">
+            <div clss="card-head"><img id="imgminislide" class="rounded mx-auto d-block mt-2 " src="../../raw/jpeg/bpowder.jpg" alt="rice"></div>
+              <div class="card-title text-center mt-2">Bleaching Powder For Industry Use</div>
+            <div class="card-body">
+              <form action="">
+                <div class="row">
+                  <div id="selecttry1" class="col-8">
+                  <select class="form-control w-100  mx-auto text-center" name="rice" id="">
+                    <option value="">1kg- Rs.200.00</option>
+                    <option value="">2kg- Rs.300.00</option>
+                    <option value="">3kg- Rs.500.00</option>
+                  </select>
+                </div>
+                <div id="selecttry1" class="col-4">
+                <select class="form-control w-100 mx-auto text-center" name="rice" id="">
+                  <option value=""> Quantity - 1 pc</option>
+                  <option value=""> Quantity - 2 pc </option>
+                  <option value=""> Quantity - 3 pc </option>
+                  <option value=""> Quantity - 4 pc</option>
+                 </select>
+                 </div>
+                </div>
+                </form>
+                <button id="cartbtn" type="submit" class="btn  btn-outline-success mt-2 w-100"data-bs-toggle="modal" data-bs-target="#modal">Add To Cart
+                </button>               
+              
+
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <button id="minibtntry" class="carousel-control-next" data-bs-target="#minislide2" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+    <button id="minibtntry" class="carousel-control-prev" data-bs-target="#minislide2" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon "></span>
+    </button>
+  </div>
+  
+  </div>
+       </section>
+
+       <section id="care">
+  <div class="container  bg-dark">
+
+    <div class="d-flex flex-wrap justify-content-evenly ">
+      <div class="container-1 text-light lh-lg"> PERSONAL CARE CATOGARY</div>
+      <div>
+      <button class="btn btn-sm btn-outline-info active" data-bs-target="#minislide3" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1">Shampoo</button>      
+    </div>
+    <div>
+      <button class="btn btn-sm btn-outline-info "data-bs-target="#minislide3" data-bs-slide-to="1" aria-label="Slide 2">Skin Care</button>      
+    </div>
+    <div>
+      <button class="btn btn-sm btn-outline-info "data-bs-target="#minislide3" data-bs-slide-to="2" aria-label="Slide 3">item3</button>      
+    </div>
+    <div>
+      <button class="btn btn-sm btn-outline-info "data-bs-target="#minislide3" data-bs-slide-to="3" aria-label="Slide 4">item4</button>     
+    </div>
+  </div>
+
+
+  <div id="minislide3" class="carousel carousel-dark slide " data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div id="" class="d-flex justify-content-evenly  w-100 bg-info" style="height:auto;">
+          <div class="card w-50">
+              <div clss="card-head"><img id="imgminislide" class="rounded mx-auto d-block mt-2 " src="../../raw/jpeg/sampoo.jpg" alt="sampoo"></div>
+              <div class="card-title text-center mt-2">Tresemme Keratin Soomth Conditioner </div>
+              <div class="card-body ">
+                <form action="">
+                  <div id="selecttry" class="row">
+                    <div id="selecttry1" class="col-8">
+                    <select id="" class="form-control w-100  mx-auto text-center" name="rice" id="">
+                      <option value="">190ml- Rs.200.00</option>
+                      <option value="">250ml- Rs.310.00</option>
+                      <option value="">500ml- Rs.450.00</option>
+                    </select>
+                  </div>
+                  <div id="selecttry1" class="col-4">
+                  <select class="form-control w-100 mx-auto text-center" name="rice" id="">
+                    <option value=""> Quantity - 1 pc</option>
+                    <option value=""> Quantity - 2 pc </option>
+                    <option value=""> Quantity - 3 pc </option>
+                    <option value=""> Quantity - 4 pc</option>
+                   </select>
+                   </div>
+                  </div>
+                  </form>
+                  <button id="cartbtn" type="submit" class="btn  btn-outline-success mt-2 w-100"data-bs-toggle="modal" data-bs-target="#modal">Add To Cart
+                  </button>               
+                
+              </div>
+          </div>
+          <div class="card w-50">
+            <div clss="card-head"><img id="imgminislide" class="rounded mx-auto d-block mt-2 " src="../../raw/jpeg/sampoo1.jpg" alt="soap"></div>
+              <div class="card-title text-center mt-2">Tresemme Ceratine Smooth Shampoo</div>
+            <div class="card-body">
+              <form action="">
+                <div class="row">
+                  <div id="selecttry1" class="col-8">
+                  <select class="form-control w-100  mx-auto text-center" name="rice" id="">
+                    <option value="">190ml- Rs.200.00</option>
+                    <option value="">250ml- Rs.310.00</option>
+                    <option value="">500ml- Rs.450.00</option>
+                  </select>
+                </div>
+                <div id="selecttry1" class="col-4">
+                <select class="form-control w-100 mx-auto text-center" name="rice" id="">
+                  <option value=""> Quantity - 1 pc</option>
+                  <option value=""> Quantity - 2 pc </option>
+                  <option value=""> Quantity - 3 pc </option>
+                  <option value=""> Quantity - 4 pc</option>
+                 </select>
+                 </div>
+                </div>
+                </form>
+                <button id="cartbtn" type="submit" class="btn  btn-outline-success mt-2 w-100"data-bs-toggle="modal" data-bs-target="#modal">Add To Cart
+                </button>               
+          
+
+            </div>
+          </div>
+        </div> 
+      </div>
+      <div class="carousel-item">
+        <div id="" class="d-flex justify-content-evenly  w-100 bg-info" style="height:auto;">
+          <div class="card w-50">
+              <div clss="card-head"><img id="imgminislide" class="rounded mx-auto d-block mt-2 " src="../../raw/jpeg/cream.jpg" alt="cream"></div>
+              <div class="card-title text-center mt-2">Lakeme Absolute Skin Lightning Night Cream</div>
+              <div class="card-body ">
+                <form action="">
+                  <div id="selecttry" class="row">
+                    <div id="selecttry1" class="col-8">
+                    <select id="" class="form-control w-100  mx-auto text-center" name="rice" id="">
+                      <option value="">500ml- Rs.120.00</option>
+                      <option value="">800ml- Rs.150.00</option>
+                      <option value="">1 Litre- Rs.200.00</option>
+                    </select>
+                  </div>
+                  <div id="selecttry1" class="col-4">
+                  <select class="form-control w-100 mx-auto text-center" name="rice" id="">
+                    <option value=""> Quantity - 1 pc</option>
+                    <option value=""> Quantity - 2 pc </option>
+                    <option value=""> Quantity - 3 pc </option>
+                    <option value=""> Quantity - 4 pc</option>
+                   </select>
+                   </div>
+                  </div>
+                  </form>
+                  <button id="cartbtn" type="submit" class="btn  btn-outline-success mt-2 w-100"data-bs-toggle="modal" data-bs-target="#modal">Add To Cart
+                  </button>               
+                
+              </div>
+          </div>
+          <div class="card w-50">
+            <div clss="card-head"><img id="imgminislide" class="rounded mx-auto d-block mt-2" src="../../raw/jpeg/facewash.jpg" alt="rice"></div>
+              <div class="card-title text-center mt-2">Ganier Purifying Facewash</div>
+            <div class="card-body">
+              <form action="">
+                <div class="row">
+                  <div id="selecttry1" class="col-8">
+                  <select class="form-control w-100  mx-auto text-center" name="rice" id="">
+                    <option value="">100g- Rs.130.00</option>
+                    <option value="">140g- Rs.150.00</option>
+                    <option value="">190g- Rs.200.00</option>
+                  </select>
+                </div>
+                <div id="selecttry1" class="col-4">
+                <select class="form-control w-100 mx-auto text-center" name="rice" id="">
+                  <option value=""> Quantity - 1 pc</option>
+                  <option value=""> Quantity - 2 pc </option>
+                  <option value=""> Quantity - 3 pc </option>
+                  <option value=""> Quantity - 4 pc</option>
+                 </select>
+                 </div>
+                </div>
+                </form>
+                <button id="cartbtn" type="submit" class="btn  btn-outline-success mt-2 w-100"data-bs-toggle="modal" data-bs-target="#modal">Add To Cart
+                </button>               
+             
+
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+    <button id="minibtntry" class="carousel-control-next" data-bs-target="#minislide3" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+    <button id="minibtntry" class="carousel-control-prev" data-bs-target="#minislide3" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon "></span>
+    </button>
+  </div>
+  
+  </div>
+                                              </section>
+  
+  
+                 <section id="brand">                             
+  <div class=" container-fluid mt-5 mb-5">
+      <h2 class=" text-center mt-3 mb-3">SHOP WITH BRANDS</h2>
+    <div class="row ">
+      <div class="col rounded">
+          
+            <img class="mx-auto d-block rounded-circle w-75 h-75" id="bankimg" src="../../raw/jpeg/brandimg1.jpg" alt="bank1">
+          
+      </div>
+      <div class="col  rounded text-light">
+       
+          <img class="mx-auto d-block rounded-circle w-75 h-75" d-block id="bankimg" src="../../raw/jpeg/brandimg2.jpg" alt="bank1">
+        
+      </div>
+      <div class="col  rounded">
+        
+          <img class="mx-auto d-block rounded-circle w-75 h-75" id="bankimg" src="../../raw/jpeg/brandimg3.jpg" alt="bank1">
+        
+      </div>
+      <div class="col rounded">
+        
+          <img class="mx-auto d-block rounded-circle w-75 h-75" id="bankimg" src="../../raw/jpeg/brandimg4.jpg" alt="bank1">
+        
+     </div>
+     <div class="col rounded">
+        
+      <img class="mx-auto d-block rounded-circle w-75 h-75" id="bankimg" src="../../raw/jpeg/brandimg5.jpg" alt="bank1">
+    
+ </div>
+
+
+    </div>
+  </div>                                            
+                   </section>
+          
+                   <section id="contactus">
+
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col">
+        <form action="">
+          <h3 class="text-center bg-info">CONTACT US</h3>
+          <textarea class=" mx-auto lg d-block mb-3" name="" id="commentbox"  rows="8" placeholder="Write a comment here..."></textarea>
+          <div class="form-floating mb-3 w-75 mx-auto">
+            <input type="email" class="form-control is valid" placeholder="email" required>
+            <label for="email">Email</label>
+          </div>
+            <div class="form-floating mb-3 w-75 mx-auto">
+              <input type="text" class="form-control is valid" placeholder="First Name" required>
+              <label for ="name"> First Name</label>
+            </div>
+            <div class="form-floating mb-3 w-75 mx-auto">
+              <input type="text" class="form-control is valid" placeholder="Last Name" required>
+              <label for ="name"> Last Name</label>
+            </div>
+                   <center>
+            <div class="form-check-inline">
+              <input type="radio" class="form-check-input" name="gender">
+              <lable for="men">Men</lable>
+            </div>
+            <div class="form-check-inline ">
+              <input type="radio" class="form-check-input" name="gender">
+              <lable for="men">Women</lable>
+            </div>
+            <div class="form-floating mt-3 mb-3 w-75 mx-auto">
+             <input type="text" class="form-control mt-3" placeholder="Mobile Number">
+             <label for ="number"> Number </label>
+            </div>
+                   </center>
+            <input type="submit" class="btn btn-outline-success w-75 d-block mx-auto mb-3">
+
+
+        </form>
+      </div>
+      <div class="col">
+        <h3 class="text-center bg-success">OUR LOCATION</h3>
+        <div class="mt-5">   
+          <iframe class="mx-auto d-block" id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d895.3341170407554!2d88.36900273932022!3d22.49376799728077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02714af0056cf1%3A0x54ebba4b376e1a5b!2sMahadev%20Mandir!5e0!3m2!1sen!2sin!4v1659710864988!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    </div>                   
+  </div>
+
+                   </section>
+
+  <div id="modal" class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="model-header"><button class="bth btn-close float-end d-block" data-bs-dismiss="modal"></button></div>
+         <div class="modal-body">  
+            <p class=" text-center"> Your Item has been added in cart</p>
+         </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="footer container-fluid bg-light">
+    <div class="row">
+
+      <div id="hovernav" class="col text-light">
+        
+          <ul class="nav flex-column ">
+            <li class="nav-item disabled">
+              <a class=" nav-link" href="#"><p class="text-dark h4">About</p></a></li>
+             <li class="nav-item">
+             <a class=" nav-link" href="#">Overview</a></li>
+             <li class="nav-item">
+             <a class=" nav-link" href="#">Privicy Policy</a></li>
+             <li class="nav-item">
+              <a class=" nav-link" href="#">FAQ</a></li>             
+             <li class="nav-item">
+             <a class=" nav-link" href="#">Terms And Condition</a></li>
+             <li class="nav-item">
+             <a class=" nav-link" href="#">Blog</a></li>
+          </ul> 
+      </div>
+
+      <div id="hovernav" class="col  text-light">
+          <ul class="nav flex-column">
+            <li class="nav-item ">
+              <a class=" nav-link" href="#"><p class="text-dark h4">Help</p></a></li>            
+             <li class="nav-item">
+             <a class=" nav-link" href="#contactus">Contact Us</a></li>
+             <li class="nav-item">
+             <a class=" nav-link" href="#"><i class="fa-solid fa-location-arrow"></i> Mahadev Mandir
+              72a, Ibrahimpur Rd, Mahendragarh, Bidhanpally, Jadavpur, Kolkata, West Bengal 700032 </a></li>
+             <li class="nav-item">
+              <a class=" nav-link" href="mailto:sampradhan077@gmail.com"><i class="fa-solid fa-envelope"></i> sampradhan077@gmail.com</a></li>
+             <li class="nav-item">
+             <a class=" nav-link" href="#">www.freshdaily.com</a></li>
+          </ul> 
+      </div>
+
+      <div class="col  text-light">
+          <ul class="nav flex-column">
+            <li class="nav-item disabled">
+              <a class=" nav-link" href="#"><p class="text-dark h4">Download Our App</p></a></li>            
+             <li class="nav-item">
+             <a class=" nav-link" href="#"> <img class="w-50 h-25 rounded" src="../../raw/jpeg/downloadapp.jpg" alt="downloadapp"> </a></li>
+             
+          </ul> 
+      </div>
+
+      <div class="col  text-light">        
+         <p class="text-dark h4 mt-2">Follow Us</p>
+            <button  class="btn btn-outline-primary rounded-circle me-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook"><i class="fa-brands fa-facebook"></i> </button>
+            <button  class="btn btn-outline-warning rounded-circle me-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Instagram"><i class="fa-brands fa-instagram"></i> </button>
+            <button  class="btn btn-outline-info rounded-circle me-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter"><i class="fa-brands fa-twitter"></i> </button>
+            <button  class="btn btn-outline-danger rounded-circle me-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Youtube"><i class="fa-brands fa-youtube"></i> </button>
+      </div>
+      
+        <div class="text-dark text-center">&copy; 2022 www.freshdaily.com. All Right Reserve. <a href="#" class="text-decoration-none"> Privacy Policy. </a> </div>
+      
+    </div>  
+  </div>
+
+
+  <script>
+     $(document).ready(function(){
+       $("#btn1").click(function(){
+         $("#searchopen").slideToggle('fast');
+       });
+     });
+     
+     $(document).ready(function(){
+     $(window).scroll(function(){
+        if( $(window).scrollTop()> 250) 
+        { $('#arrowup').show(); }
+
+        else { $('#arrowup').hide(); }
+     });
+     $('#arrowup').click(function(){
+      $('html').animate({scrollTop:0});
+     });
+    });
+    //jquery event for login alert
+    $(document).ready(function(){
+      $("#submit,#submitt").click(function(){
+        alert( "Thanks for log-in" ) ;
+      });
+    });
+    //jquery event for badge
+    i = 0;
+    $(document).ready(function(){
+      $(" minislide, #cartbtn").click(function(){
+        $("#badge").text(i += 1);
+      });
+    });
+
+// tooltips
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+
+
+
+  </script>
+</body>
+</html>
